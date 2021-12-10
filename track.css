@@ -5,12 +5,12 @@
 }
 
 body{
-    background-color: white;
+    background-color: black;
     color: white;
 }
 
 #wrap{
-    background-color: rgba(47, 46, 95, 0.59);
+    background-color: hsl(235, 45%, 61%);
     max-width: 400px;
     padding: 30px;
     margin: 0 auto;
@@ -19,15 +19,16 @@ body{
 #profile{
     background-color: hsl(235, 46%, 20%);
     position: relative;
-    height: 200px;
+    height: 180px;
     border-radius: 10px;
 }
 
 #userinfo{
     position: absolute;
     top: 0;
-    background-color: red;
+    background-color: hsl(246, 80%, 60%);
     width: 100%;
+    height: 70%;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -35,10 +36,10 @@ body{
 }
 
 #userinfo img{
-    width: 100px;
+    width: 80px;
     margin-right: 10px;
-    border: 2px solid white;
-    border-radius: 50%;
+    border: 3px solid white;
+    border-radius: 40px;
 }
 
 #button{
@@ -54,10 +55,6 @@ body{
     cursor: pointer;
 }
 
-#button p:hover{
-    color: red;
-}
-
 #button p:active{
     color: red;
 }
@@ -66,17 +63,20 @@ body{
     height: 150px;
     position: relative;
     border-radius: 10px;
-    border: 1px solid yellow;
-    margin: 10px 0;
+    margin: 20px 0;
+    overflow: hidden;
+    width: 100%;
 }
 
 #timedata{
-    border: 1px solid red;
+    background-color: hsl(235, 46%, 20%);
     border-radius: 10px;
     padding: 20px;
     position: absolute;
     bottom: 0;
     width: 100%;
+    height: 115px;
+    z-index: 9999;
 }
 
 #firstp{
@@ -90,4 +90,94 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+#data #backdiv:nth-child(1){
+    background-color: hsl(15, 100%, 70%);
+}
+
+#data #backdiv:nth-child(1)::after{
+    content: url(images/icon-work.svg);
+    position: absolute;
+    top: -15px;
+    right: 20px;
+}
+
+#data #backdiv:nth-child(2){
+    background-color: hsl(195, 74%, 62%);
+}
+
+#data #backdiv:nth-child(2)::after{
+    content: url(images/icon-play.svg);
+    position: absolute;
+    top: -15px;
+    right: 20px;
+}
+
+#data #backdiv:nth-child(3){
+    background-color: hsl(348, 100%, 68%);
+}
+
+#data #backdiv:nth-child(3)::after{
+    content: url(images/icon-study.svg);
+    position: absolute;
+    top: -15px;
+    right: 20px;
+}
+#data #backdiv:nth-child(4){
+    background-color: hsl(145, 58%, 55%);
+}
+
+
+#data #backdiv:nth-child(4)::after{
+    content: url(images/icon-exercise.svg);
+    position: absolute;
+    top: 0px;
+    right: 20px;
+}
+
+#data #backdiv:nth-child(5){
+    background-color: hsl(264, 64%, 52%);
+}
+
+#data #backdiv:nth-child(5)::after{
+    content: url(images/icon-social.svg);
+    position: absolute;
+    top: -10px;
+    right: 20px;
+}
+
+#data #backdiv:nth-child(6){
+    background-color: hsl(43, 84%, 65%);
+}
+
+#data #backdiv:nth-child(6)::after{
+    content: url(images/icon-self-care.svg);
+    position: absolute;
+    top: -15px;
+    right: 20px;
+}
+
+
+/*for the responsieve screen of sm and above*/
+@media screen and (min-width:1000px){    
+    #wrap{
+        max-width: 1200px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #profile{
+        width: 25%;
+    }
+    #data{
+        border: 1px solid red;
+        width: 75%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #data #backdiv{
+        width: 33%;
+    }
 }
