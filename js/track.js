@@ -1,9 +1,10 @@
 
 let databox = document.querySelector("#data");
-let template = "";
+
 
 let showData = function (x) {
-    
+    let template = "";
+    let timeframe = "";
     let req = new XMLHttpRequest();
     req.open("GET", "json/data.json");
     
@@ -12,13 +13,22 @@ let showData = function (x) {
         let ourData = JSON.parse(req.responseText);
         
         ourData.forEach( (data)  => {
-            console.log(data.timeframes[x].current);
+            if (x === "daily") {
+                timeframe += 'Yesterday';
+            } else if (x === "weekly") {
+                timeframe += 'Last Week';  
+            } else if (x === "monthly") {
+                timeframe += 'Last Month';  
+            }
+            
              template += `
-                <div id="timedata">
-                    <p id="firstp">${data.title} <span><img src="images/icon-ellipsis.svg"></span></p>
-                    <div id="difference">
-                        <h1>${data.timeframes[x].current}hrs</h1>
-                        <p>Last Week - ${data.timeframes[x].previous}hrs</p>
+                <div id="backdiv">
+                    <div id="timedata">
+                        <p id="firstp">${data.title} <span><img src="images/icon-ellipsis.svg"></span></p>
+                        <div id="difference">
+                            <h1>${data.timeframes[x].current}hrs</h1>
+                            <p>${timeframe} - ${data.timeframes[x].previous}hrs</p>
+                        </div>
                     </div>
                 </div>
              `
