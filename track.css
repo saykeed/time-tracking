@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    color: white;
+}
+
+#wrap{
+    background-color: blue;
+    max-width: 400px;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+#profile{
+    background-color: hsl(235, 46%, 20%);
+    position: relative;
+    height: 200px;
+    border-radius: 10px;
+}
+
+#userinfo{
+    position: absolute;
+    top: 0;
+    background-color: red;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#userinfo img{
+    width: 100px;
+    margin-right: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+#button{
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+#button p{
+    margin: 20px;
+    cursor: pointer;
+}
+
+#button p:hover{
+    color: red;
+}
+
+#button p:active{
+    color: red;
+}
+
+#timedata{
+    border: 1px solid red;
+}
+
+#firstp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+#difference{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
