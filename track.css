@@ -10,7 +10,7 @@ body{
 }
 
 #wrap{
-    background-color: blue;
+    background-color: rgba(47, 46, 95, 0.59);
     max-width: 400px;
     padding: 30px;
     margin: 0 auto;
@@ -62,14 +62,28 @@ body{
     color: red;
 }
 
+#backdiv{
+    height: 150px;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid yellow;
+    margin: 10px 0;
+}
+
 #timedata{
     border: 1px solid red;
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 #firstp{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 10px;
 } 
 
 #difference{
